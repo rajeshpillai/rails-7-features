@@ -13,6 +13,10 @@
   <body>
     <div>
       <h2>Blog Application</h2>
+      <div>
+        <%=link_to "Home", root_path %>
+        <%=link_to "Tasks", tasks_path %>
+      </div>
       <%= yield %>
     </div>
   </body>

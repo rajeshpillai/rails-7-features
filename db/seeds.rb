@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require "faker"
+
+puts "Seeding dev data..."
+
+# Task.destroy_all 
+
+400000.times do |i| 
+
+  Task.create(
+    title: Faker::Quote.famous_last_words,
+    completed: i%2 == 0 ? true : false
+  )
+end
